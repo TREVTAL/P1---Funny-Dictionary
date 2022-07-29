@@ -1,17 +1,61 @@
 
+/*HEADER*/ 
 
+header{
+margin-bottom: 75px;
 
+}
 
 /* hero */ 
 
 
 .feature-hero{
 
-   
+   margin-top: 25px;
     padding-top: 40px;
         height: 100px;
         border: 1px solid black;
         text-align: center;
         width: 85%;
         margin: auto;
+    }
+
+    /* Input*/ 
+
+    .Input-options-block{
+
+        width: 25%;
+        margin-left: 100px;
+        margin-bottom: 50px;
+    }
+
+    .is-primary{
+
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    /*GIF*/ 
+
+    #GIF{
+
+        margin-left: 100px;
+        border: 1px solid black;
+height: 450px;
+        width: 30%;
+        margin-bottom: 50px;
+        display: inline-block;
+
+    }
+
+    /* Definition Box*/
+
+    .definitionBox{float:right;
+    
+        height: 450px;
+    margin-right: 350px;
+    width: 25%;
+    
     }
