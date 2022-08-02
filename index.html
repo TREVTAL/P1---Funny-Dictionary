@@ -5,12 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- FlatIcon -->
+
+    <link rel="shortcut icon" href="./Images/FunnyDictionary.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./Assets/style.css">
+
 
     <title>FUNNY DICTIONARY</title>
+    <link rel="stylesheet" href="/style.css"/>
     
 </head>
+
 <body>
+
+<!-- HEADER -->
+
+
+<header>
+
+    <h1 class="title">FUNNY DICTIONARY</h1>
+
+    <h2>Project 01 - Funny Dictionary</h2>
+
+</header>
+
+<hr>
+
+    <!-- HERO -->
+
+    <div class="block feature-hero">
+        <strong>Bienvenida</strong>.
+    </div>
+
+<!--  WIREFRAME -->
+
+<!-- Initial welcome, only visible to request name that's going to be saved in localstorage -->
+<div class="Input columns is-centered">
+  <div class="column is-half">
+    <strong>Hello, we're so glad to see you. How will you like to be called?</strong>
+    <input class="input is-primary is-primary" type="text" placeholder="Enter your name">
+  </div>
+</div>
+
+
+<!-- Once having name, the following code will be displayed and welcome will be hidden  -->
+<div class="Input-options-block">
+    <strong>Enter a word</strong>
+  <input class="input is-primary " type="text" placeholder="Enter a Word">
+
+
+  <div class="dropdown is-hoverable">
+
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+        <span>what you need</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+      <div class="dropdown-content">
+        <a href="#" class="dropdown-item">
+            definition
+        </a>
+        <a href="#" class="dropdown-item">
+            synonyms
+        </a>
+        <a href="#" class="dropdown-item">
+            antonyms
+        </a>
+        <a href="#" class="dropdown-item">
+            examples
+        </a>
+        <a href="#" class="dropdown-item">
+            syllables
+        </a>
+        <a href="#" class="dropdown-item">
+            typeOf
+        </a>
+        <a href="#" class="dropdown-item">
+            pronunciation
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item">
+          Reset
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="GIF"></div>
+
+  <div class="box definitionBox">
+    I'm in a box.
+  </div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
     
+        <p>
+            <strong>Funny Dictionary</strong> by <a href="file:///D:/@Bootcamp%20Coding/Projects/P1---Funny-Dictionary/Team/index.html" target="_blank" rel="noopener noreferrer">TEAM III</a>. Thanks for visiting us.
+            The website content
+            is for the <a href="https://bootcamp.tec.mx/" target="_blank" rel="noopener noreferrer">Bootcamp</a> project only.
+        </p>
+    
+</footer>
+
+<script src="./Assets/script.js"></script>
 </body>
+
 </html>
