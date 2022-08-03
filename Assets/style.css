@@ -60,7 +60,7 @@ header {
 
 .Input-options-block {
     width: 100%;
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 #name {
@@ -89,9 +89,9 @@ header {
 }
 
 .button2{
-    background-color: #2A3B4D;
-    color: #77A8D9;
-    border: 4px solid #547799;
+    background-color: #4c2a4d;
+    color: #000000;
+    border: 4px solid #997954;
 }
 
 button:hover{
