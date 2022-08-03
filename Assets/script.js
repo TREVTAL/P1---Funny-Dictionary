@@ -3,14 +3,17 @@ var nameBtnEl = document.querySelector('#nameBtn');
 var enteredWordEl = document.querySelector('#enteredWord');
 var inputBtnEl = document.querySelector ('#inputShow');
 var dropDownEl = document.querySelector ('#resultType');
-var gifEl = document.querySelector('#GIF');
+var gifEl = document.querySelector('#imgDest');
 var boxcontentEl = document.querySelector("#BoxContent");
+var definitionContentEl = document.querySelector('#definitionContent');
+// var dropDownEl = document.querySelector('#dropDown');
+var localStorageCheck = localStorage.getItem('lsname');
 
 var giphyApi = "caPF8xl6cQc8gPGCp7dHvWhmqQuMxD8T";
 
 var wordApi = "429fbbca4emsh4a8adf9b0310694p1480a8jsnc3cf974a3f0f"; 
 
-
+checkLS(localStorageCheck);
 
 function nameSubmit (event) {
     event.preventDefault();
@@ -18,11 +21,22 @@ function nameSubmit (event) {
     var savedName = nameEl.value.trim();
     console.log(savedName);
     localStorage.setItem('lsname', savedName);
+    localStorageCheck = localStorage.getItem('lsname');
+    checkLS(localStorageCheck);
 };
 
-// if (lsname === "")  {
 
-// }
+function checkLS (localStorageCheck) {
+if (localStorageCheck !== null) {
+    console.log(`Name exists`);
+    nameBtnEl.style.visibility= "hidden";
+    return;
+} else {
+    console.log(`Name not found`);
+    return;
+}
+}
+
 
 function wordsubmit (event) {
     event.preventDefault();
@@ -30,6 +44,7 @@ function wordsubmit (event) {
     var word = enteredWordEl.value.trim();
     console.log(word);
     getGiphyApi(word);
+    checkLS;
 }
 
 
@@ -45,9 +60,9 @@ function getGiphyApi(word) {
         console.log(data.data[0].images.original.url);
         var giphUrl = data.data[0].images.original.url;
         
-        var gifImg = document.createElement('img');
-        gifImg.setAttribute('src' , giphUrl);
-        gifEl.appendChild(gifImg); 
+        // var gifImg = document.createElement('img');
+        // gifImg.setAttribute('src' , giphUrl);
+        gifEl.setAttribute('src', giphUrl); 
         getwordApi(word);
     })   
 }
@@ -65,9 +80,10 @@ fetch(requestsecondUrl, options)
 var wordDef = data.definitions[0].definition;
 console.log(wordDef);
 
-var wordDefEl = document.createElement('h4');
-wordDefEl.textContent = wordDef;
-boxcontentEl.appendChild(wordDefEl); 
+// var wordDefEl = document.createElement('h4');
+// wordDefEl.textContent = wordDef;
+// boxcontentEl.appendChild(wordDefEl); 
+definitionContentEl.textContent = wordDef;
 
 })
 
@@ -84,5 +100,5 @@ const options = {
 
 
 
-inputShowEl.addEventListener('submit', wordsubmit);
+inputBtnEl.addEventListener('submit', wordsubmit);
 nameBtnEl.addEventListener('submit', nameSubmit);
