@@ -75,11 +75,32 @@
 
 
 
+<<<<<<< HEAD
 <!-- <div class="Input-options-block"> -->
   <form class="Input columns is-centered" id="inputShow">
     <strong class="searchWord">What word would you like to lookup?</strong>
     <input class="input is-primary" type="text" placeholder="Enter a Word" id="enteredWord">
     <button class="button2">Search</button>
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="Input-options-block"> -->
+<div>
+  <form class="Input columns is-centered is-multiline" id="inputShow">
+    <strong class="searchWord column is-half">What word would you like to lookup?</strong>
+    <input class="input is-primary column is-half" type="text" placeholder="Enter a Word" id="enteredWord">
+    <button class="button">Search</button>
+>>>>>>> 0b5b39064c3a89bc147acb82c6853c80f1f4f827
   </form>
   
   
@@ -123,7 +144,7 @@
 
   <div class="dropdown is-hoverable">
 
-    <div class="dropdown-trigger">
+    <div class="dropdown-trigger" id="dropDown">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
         <span>what you need</span>
         <span class="icon is-small">
@@ -168,7 +189,7 @@
 <!-- GIPHY.API destination -->
 <div id="GIF">
 
-
+<img id="imgDest">
   
 </div>
 
@@ -176,6 +197,8 @@
 <!-- WORD.API destination -->
   <div class="box definitionBox" id="BoxContent">
  
+    <h5 id="definitionContent"></h5>
+
   </div>
 
 
