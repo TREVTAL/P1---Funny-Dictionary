@@ -4,9 +4,11 @@ var enteredWordEl = document.querySelector('#enteredWord');
 var inputBtnEl = document.querySelector ('#inputShow');
 var dropDownEl = document.querySelector ('#resultType');
 var gifEl = document.querySelector('#GIF');
+var boxcontentEl = document.querySelector("#BoxContent");
 
 var giphyApi = "caPF8xl6cQc8gPGCp7dHvWhmqQuMxD8T";
 
+var wordApi = "429fbbca4emsh4a8adf9b0310694p1480a8jsnc3cf974a3f0f"; 
 
 
 
@@ -45,11 +47,42 @@ function getGiphyApi(word) {
         
         var gifImg = document.createElement('img');
         gifImg.setAttribute('src' , giphUrl);
-        console.log(gifImg);
-        gifEl.appendChild(gifImg);
+        gifEl.appendChild(gifImg); 
+        getwordApi(word);
+    })   
+}
+
+ function getwordApi(word) {
+
+    var requestsecondUrl= "https://wordsapiv1.p.rapidapi.com/words/"+word+"/definitions"
+
+fetch(requestsecondUrl, options)
+    .then(function (response) {
+        return response.json();
     })
+    
+    .then(function(data){
+var wordDef = data.definitions[0].definition;
+console.log(wordDef);
+
+var wordDefEl = document.createElement('h4');
+wordDefEl.textContent = wordDef;
+boxcontentEl.appendChild(wordDefEl); 
+
+})
+
 }
 
 
-inputBtnEl.addEventListener('submit', wordsubmit);
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '429fbbca4emsh4a8adf9b0310694p1480a8jsnc3cf974a3f0f',
+		'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+	}
+};
+
+
+
+inputShowEl.addEventListener('submit', wordsubmit);
 nameBtnEl.addEventListener('submit', nameSubmit);
