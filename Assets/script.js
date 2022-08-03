@@ -1,7 +1,7 @@
 var nameEl = document.querySelector('#name');
 var nameBtnEl = document.querySelector('#nameBtn');
 var enteredWordEl = document.querySelector('#enteredWord');
-var inputShowEl = document.querySelector ('#inputShow');
+var inputBtnEl = document.querySelector ('#inputShow');
 var dropDownEl = document.querySelector ('#resultType');
 var gifEl = document.querySelector('#GIF');
 
@@ -45,10 +45,11 @@ function getGiphyApi(word) {
         
         var gifImg = document.createElement('img');
         gifImg.setAttribute('src' , giphUrl);
+        console.log(gifImg);
         gifEl.appendChild(gifImg);
     })
 }
 
 
-inputShowEl.addEventListener('submit', wordsubmit);
+inputBtnEl.addEventListener('submit', wordsubmit);
 nameBtnEl.addEventListener('submit', nameSubmit);
