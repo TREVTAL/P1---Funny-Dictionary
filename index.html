@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
     <!-- FlatIcon -->
+=======
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>FUNNY DICTIONARY</title>
+    
+</head>
+<body>
+    
+</body>
+
+<!-- FlatIcon -->
+>>>>>>> 2aa0ebd6cc889b8dfac438e17f0c441eb210a176
 
     <link rel="shortcut icon" href="./Images/FunnyDictionary.png" type="image/x-icon">
 
@@ -14,7 +27,7 @@
 
 
     <title>FUNNY DICTIONARY</title>
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="./Assets/style.css"/>
     
 </head>
 
@@ -27,33 +40,101 @@
 
     <h1 class="title">FUNNY DICTIONARY</h1>
 
-    <h2>Project 01 - Funny Dictionary</h2>
-
 </header>
-
-<hr>
 
     <!-- HERO -->
 
     <div class="block feature-hero">
-        <strong>Bienvenida</strong>.
+        <strong>📖 Welcome to Funny Dictionary! The fun way to lookup English vocabulary 📖 </strong>.
     </div>
 
 <!--  WIREFRAME -->
 
 <!-- Initial welcome, only visible to request name that's going to be saved in localstorage -->
-<div class="Input columns is-centered">
+<form class="Input columns is-centered" id="nameBtn">
+  <div>
+    <p class="askName">Hello, we're so glad to see you. How will you like to be called?</p>
+    <input class="input is-primary is-primary" type="text" id="name" placeholder="Enter your name">
+    <button class="button1">Save Name</button>
+  </div>
+</form>
+
+<!-- <div class="Input columns is-centered">
   <div class="column is-half">
     <strong>Hello, we're so glad to see you. How will you like to be called?</strong>
     <input class="input is-primary is-primary" type="text" placeholder="Enter your name">
   </div>
-</div>
+</div> -->
+
+<!-- <form id="nameBtn">
+  <div class="Input columns is-centered">
+    <label for="name"></label>
+    <input type="text" class="form-control" id="name" placeholder="Arteaga" />
+  </div>
+  <button class="btn btn-primary">Search.</button>
+</form> -->
 
 
 <!-- Once having name, the following code will be displayed and welcome will be hidden  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="Input-options-block">
-    <strong>Enter a word</strong>
-  <input class="input is-primary " type="text" placeholder="Enter a Word">
+  <form class="Input columns is-centered" id="inputShow">
+    <strong class="searchWord">What word would you like to lookup?</strong>
+    <input class="input is-primary" type="text" placeholder="Enter a Word" id="enteredWord">
+    <button class="button2">Search</button>
+  </form>
+  
+  
+
+<!-- 
+  <select class=“form-control” id=“resultType”>
+    <option value=“”>Everything</option>
+    <option value=“definitions”>Definitions</option>
+    <option value=“synonyms”>Synonyms</option>
+    <option value=“antonyms”>Antonyms</option>
+    <option value=“examples”>Examples</option>
+    <option value=“rhymes”>Rhymes</option>
+    <option value=“frequency”>Frequency</option>
+    <option value=“typeOf”>Is A Type Of</option>
+    <option value=“hasTypes”>Has Types</option>
+    <option value=“partOf”>Part Of</option>
+    <option value=“hasParts”>Has Parts</option>
+    <option value=“instanceOf”>Is An Instance Of</option>
+    <option value=“hasInstances”>Has Instances</option>
+    <option value=“inRegion”>In Region</option>
+    <option value=“regionOf”>Region Of</option>
+    <option value=“usageOf”>Usage Of</option>
+    <option value=“hasUsages”>Has Usages</option>
+    <option value=“memberOf”>Is A Member Of</option>
+    <option value=“hasMembers”>Has Members</option>
+    <option value=“substanceOf”>Is A Substance Of</option>
+    <option value=“hasSubstances”>Has Substances</option>
+    <option value=“hasAttribute”>Has Attribute</option>
+    <option value=“inCategory”>In Category</option>
+    <option value=“hasCategories”>Has Categories</option>
+    <option value=“also”>Also</option>
+    <option value=“pertainsTo”>Pertains To</option>
+    <option value=“similarTo”>Similar To</option>
+    <option value=“entails”>Entails</option>
+  </select> -->
+
+
+
+
 
 
   <div class="dropdown is-hoverable">
@@ -66,42 +147,51 @@
         </span>
       </button>
     </div>
+    
     <div class="dropdown-menu" id="dropdown-menu3" role="menu">
       <div class="dropdown-content">
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="definition">
             definition
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="synonyms">
             synonyms
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="antonyms">
             antonyms
         </a>
-        <a href="#" class="dropdown-item">
+        <!-- <a href="#" class="dropdown-item" data-selection="examples">
             examples
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="syllables">
             syllables
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="typeOf">
             typeOf
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item" data-selection="pronunciation">
             pronunciation
-        </a>
-        <hr class="dropdown-divider">
+        </a> -->
+        <!-- <hr class="dropdown-divider">
         <a href="#" class="dropdown-item">
           Reset
-        </a>
+        </a> -->
       </div>
     </div>
   </div>
 </div>
 
-<div id="GIF"></div>
 
-  <div class="box definitionBox">
-    I'm in a box.
+<!-- GIPHY.API destination -->
+<div id="GIF">
+
+
+  
+</div>
+
+
+<!-- WORD.API destination -->
+  <div class="box definitionBox" id="BoxContent">
+ 
   </div>
 
 
