@@ -6,13 +6,15 @@ var dropDownEl = document.querySelector ('#resultType');
 var gifEl = document.querySelector('#imgDest');
 var boxcontentEl = document.querySelector("#BoxContent");
 var definitionContentEl = document.querySelector('#definitionContent');
+var generalContentEl = document.querySelector('#generalContent');
+var resetNameEl = document.querySelector('#resetName');
+var lookupWithNameEl = document.querySelector('#lookupWithName');
 // var dropDownEl = document.querySelector('#dropDown');
 var localStorageCheck = localStorage.getItem('lsname');
 
 var gifBoxEl = document.querySelector('#GIF')
 
 var giphyApi = "caPF8xl6cQc8gPGCp7dHvWhmqQuMxD8T";
-
 var wordApi = "429fbbca4emsh4a8adf9b0310694p1480a8jsnc3cf974a3f0f"; 
 
 checkLS(localStorageCheck);
@@ -32,15 +34,27 @@ function checkLS (localStorageCheck) {
 if (localStorageCheck !== null) {
     console.log(`Name exists`);
     nameBtnEl.style.visibility= "hidden";
+    generalContentEl.style.visibility="visible";
+    resetNameEl.style.visibility="visible";
+    //   What word would you like to lookup?
+    lookupWithNameEl.textContent = "Hello " + localStorage.getItem('lsname') + ', what word would you like to lookup?';
     return;
 } else {
     console.log(`Name not found`);
+    nameBtnEl.style.visibility= "visible";
+    generalContentEl.style.visibility="hidden";
+    resetNameEl.style.visibility="hidden";
     return;
 }
 }
 
+function eraseLS () {
+    localStorage.removeItem('lsname');
+    localStorageCheck = localStorage.getItem('lsname');
+    checkLS(localStorageCheck);
+}
 
-function wordsubmit (event) {
+function wordSubmit (event) {
     event.preventDefault();
 
     var word = enteredWordEl.value.trim();
@@ -112,6 +126,6 @@ const options = {
 };
 
 
-
-inputBtnEl.addEventListener('submit', wordsubmit);
+resetNameEl.addEventListener('click', eraseLS);
+inputBtnEl.addEventListener('submit', wordSubmit);
 nameBtnEl.addEventListener('submit', nameSubmit);

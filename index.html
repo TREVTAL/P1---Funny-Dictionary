@@ -57,145 +57,68 @@
     </div>
   </form>
 
-  <!-- <div class="Input columns is-centered">
-  <div class="column is-half">
-    <strong>Hello, we're so glad to see you. How will you like to be called?</strong>
-    <input class="input is-primary is-primary" type="text" placeholder="Enter your name">
-  </div>
-</div> -->
-
-  <!-- <form id="nameBtn">
-  <div class="Input columns is-centered">
-    <label for="name"></label>
-    <input type="text" class="form-control" id="name" placeholder="Arteaga" />
-  </div>
-  <button class="btn btn-primary">Search.</button>
-</form> -->
-
-
-  <!-- Once having name, the following code will be displayed and welcome will be hidden  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <!-- <div class="Input-options-block"> -->
-  <div>
-    <form class="Input columns is-centered is-multiline" id="inputShow">
-      <strong class="searchWord column is-half">What word would you like to lookup?</strong>
-      <input class="input is-primary column is-half" type="text" placeholder="Enter a Word" id="enteredWord">
-      <button class="button">Search</button>
-    </form>
+  <div id="generalContent">
+      <div>
+      <form class="Input columns is-centered is-multiline" id="inputShow">
+        <strong class="searchWord column is-half" id="lookupWithName"></strong>
+        <input class="input is-primary column is-half" type="text" placeholder="Enter a Word" id="enteredWord">
+        <button class="button">Search</button>
+      </form>
 
 
+      <div class="dropdown is-hoverable">
 
-    <!-- 
-  <select class=“form-control” id=“resultType”>
-    <option value=“”>Everything</option>
-    <option value=“definitions”>Definitions</option>
-    <option value=“synonyms”>Synonyms</option>
-    <option value=“antonyms”>Antonyms</option>
-    <option value=“examples”>Examples</option>
-    <option value=“rhymes”>Rhymes</option>
-    <option value=“frequency”>Frequency</option>
-    <option value=“typeOf”>Is A Type Of</option>
-    <option value=“hasTypes”>Has Types</option>
-    <option value=“partOf”>Part Of</option>
-    <option value=“hasParts”>Has Parts</option>
-    <option value=“instanceOf”>Is An Instance Of</option>
-    <option value=“hasInstances”>Has Instances</option>
-    <option value=“inRegion”>In Region</option>
-    <option value=“regionOf”>Region Of</option>
-    <option value=“usageOf”>Usage Of</option>
-    <option value=“hasUsages”>Has Usages</option>
-    <option value=“memberOf”>Is A Member Of</option>
-    <option value=“hasMembers”>Has Members</option>
-    <option value=“substanceOf”>Is A Substance Of</option>
-    <option value=“hasSubstances”>Has Substances</option>
-    <option value=“hasAttribute”>Has Attribute</option>
-    <option value=“inCategory”>In Category</option>
-    <option value=“hasCategories”>Has Categories</option>
-    <option value=“also”>Also</option>
-    <option value=“pertainsTo”>Pertains To</option>
-    <option value=“similarTo”>Similar To</option>
-    <option value=“entails”>Entails</option>
-  </select> -->
+        <div class="dropdown-trigger" id="dropDown">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>what you need</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
 
-
-
-
-
-
-    <div class="dropdown is-hoverable">
-
-      <div class="dropdown-trigger" id="dropDown">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-          <span>what you need</span>
-          <span class="icon is-small">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-
-      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item" data-selection="definition">
-            definition
-          </a>
-          <a href="#" class="dropdown-item" data-selection="synonyms">
-            synonyms
-          </a>
-          <a href="#" class="dropdown-item" data-selection="antonyms">
-            antonyms
-          </a>
-          <!-- <a href="#" class="dropdown-item" data-selection="examples">
-            examples
-        </a>
-        <a href="#" class="dropdown-item" data-selection="syllables">
-            syllables
-        </a>
-        <a href="#" class="dropdown-item" data-selection="typeOf">
-            typeOf
-        </a>
-        <a href="#" class="dropdown-item" data-selection="pronunciation">
-            pronunciation
-        </a> -->
-          <!-- <hr class="dropdown-divider">
-        <a href="#" class="dropdown-item">
-          Reset
-        </a> -->
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item" data-selection="definition">
+              definition
+            </a>
+            <a href="#" class="dropdown-item" data-selection="synonyms">
+              synonyms
+            </a>
+            <a href="#" class="dropdown-item" data-selection="antonyms">
+              antonyms
+            </a>
+          </div>
         </div>
       </div>
     </div>
+  <div>
+    <div class="content-boxed">
+      <!-- GIPHY.API destination -->
+      <div id="GIF">
+
+        <img id="imgDest">
+
+      </div>
+
+
+      <!-- WORD.API destination -->
+      
+      <div class="box definitionBox" id="BoxContent">
+
+        <h5 id="definitionContent"></h5>
+
+      </div>
+
+    </div>
   </div>
-<div>
-  <div class="content-boxed">
-    <!-- GIPHY.API destination -->
-    <div id="GIF">
-
-      <img id="imgDest">
-
-    </div>
+  
 
 
-    <!-- WORD.API destination -->
-    
-    <div class="box definitionBox" id="BoxContent">
-
-      <h5 id="definitionContent"></h5>
-
-    </div>
-
+  <div id="resetName">
+    <button class="button1">Reset Name</button>
   </div>
 
   <!-- FOOTER -->
