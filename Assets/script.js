@@ -9,6 +9,8 @@ var definitionContentEl = document.querySelector('#definitionContent');
 // var dropDownEl = document.querySelector('#dropDown');
 var localStorageCheck = localStorage.getItem('lsname');
 
+var gifBoxEl = document.querySelector('#GIF')
+
 var giphyApi = "caPF8xl6cQc8gPGCp7dHvWhmqQuMxD8T";
 
 var wordApi = "429fbbca4emsh4a8adf9b0310694p1480a8jsnc3cf974a3f0f"; 
@@ -42,9 +44,20 @@ function wordsubmit (event) {
     event.preventDefault();
 
     var word = enteredWordEl.value.trim();
-    console.log(word);
-    getGiphyApi(word);
-    checkLS;
+
+    if (!word){
+        alert('Must Include Word')
+        return
+    } else {
+
+        gifBoxEl.style.display = 'inline-block'
+        boxcontentEl.style.display = 'block'
+    
+        console.log(word);
+        getGiphyApi(word);
+        checkLS;
+    }
+
 }
 
 

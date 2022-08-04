@@ -3,6 +3,7 @@
 /*BODY*/
 body{
     background-color: #77A8D9;
+    min-height: 100vh;
 }
 
 strong{
@@ -111,24 +112,37 @@ margin-bottom: 50px;
 
 }
 
+/* Content boxes */
+.content-boxed {
+    margin-bottom: 60px;
+}
+
 /*GIF*/
 
 #GIF {
+    overflow: hidden;
     margin-left: 100px;
-    border: 1px solid black;
-    height: 450px;
-    width: 30%;
+
+    max-height: 450px;
+    max-width: 30%;
     margin-bottom: 50px;
-    display: inline-block;
+    display: none;
+}
+
+#GIF img {
+    /* min-height: 100%; */
+    border: 1px solid black;
 }
 
 /* Definition Box*/
 
 .definitionBox {
     float: right;
-    height: 450px;
+    max-height: 450px;
     margin-right: 350px;
+    padding-bottom: 20px;
     width: 25%;
+    display: none;
 }
 
 .footer {
@@ -137,4 +151,7 @@ margin-bottom: 50px;
     padding-top: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+
+    position: sticky;
+    top: 100vh;
 }
