@@ -1,16 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-    <title>FUNNY DICTIONARY</title>
-    
+  <title>FUNNY DICTIONARY</title>
+
 </head>
+
 <body>
-    
+
 </body>
+
+<!-- FlatIcon -->
+
+<link rel="shortcut icon" href="./Images/FunnyDictionary.png" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="./Assets/style.css">
+
+
+<title>FUNNY DICTIONARY</title>
+<link rel="stylesheet" href="./Assets/style.css" />
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+
+  <header>
+
+    <h1 class="title">FUNNY DICTIONARY</h1>
+
+  </header>
+
+  <!-- HERO -->
+
+  <div class="block feature-hero">
+    <strong>📖 Welcome to Funny Dictionary! The fun way to lookup English vocabulary 📖 </strong>.
+  </div>
+
+  <!--  WIREFRAME -->
+
+  <!-- Initial welcome, only visible to request name that's going to be saved in localstorage -->
+  <form class="Input columns is-centered" id="nameBtn">
+    <div>
+      <p class="askName">Hello, we're so glad to see you. How will you like to be called?</p>
+      <input class="input is-primary" type="text" id="name" placeholder="Enter your name">
+      <button class="button1 is-centered">Save Name</button>
+    </div>
+  </form>
+
+
+  <!-- <div class="Input-options-block"> -->
+  <div id="generalContent">
+       
+        <form class="Input columns is-centered" id="inputShow">
+          <div>
+            <p class="searchWord column is-full" id="lookupWithName"></p>
+            <input class="input is-primary" type="text" placeholder="Enter a Word" id="enteredWord">
+            <button class="button1 is-centered">Search</button>
+          </div>
+        </form>
+   
+      <div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+      
+      <div class="content-boxed">
+        <!-- GIPHY.API destination -->
+            <div id="GIF">
+
+              <img id="imgDest">
+
+            </div>
+
+        <!-- WORD.API destination -->
+        
+        <div class="box definitionBox" id="BoxContent">
+
+          <h5 id="definitionContent"></h5>
+
+        </div>
+
+      </div>
+    </div>
+  
+<br>
+
+  <div id="resetName" class="columns is-centered">
+    <button class="button2">Reset Name</button>
+  </div>
+</div>
+
+<br>
+<br>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <p>
+      <strong>Funny Dictionary</strong> by <a href="./Team/index.html" target="_blank" rel="noopener noreferrer">TEAM
+        I</a>. Thanks for visiting us.
+      The website content
+      is for the <a href="https://bootcamp.tec.mx/" target="_blank" rel="noopener noreferrer">Bootcamp</a> project only.
+    </p>
+
+  </footer>
+
+  <script src="./Assets/script.js"></script>
+</body>
+
 </html>
