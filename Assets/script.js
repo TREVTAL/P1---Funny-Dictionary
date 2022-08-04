@@ -51,6 +51,7 @@ if (localStorageCheck !== null) {
 function eraseLS () {
     localStorage.removeItem('lsname');
     localStorageCheck = localStorage.getItem('lsname');
+    window.scrollTo(0,0);
     checkLS(localStorageCheck);
 }
 
