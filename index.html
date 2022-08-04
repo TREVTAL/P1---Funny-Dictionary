@@ -52,75 +52,59 @@
   <form class="Input columns is-centered" id="nameBtn">
     <div>
       <p class="askName">Hello, we're so glad to see you. How will you like to be called?</p>
-      <input class="input is-primary is-primary" type="text" id="name" placeholder="Enter your name">
-      <button class="button1">Save Name</button>
+      <input class="input is-primary" type="text" id="name" placeholder="Enter your name">
+      <button class="button1 is-centered">Save Name</button>
     </div>
   </form>
 
 
   <!-- <div class="Input-options-block"> -->
   <div id="generalContent">
-      <div>
-      <form class="Input columns is-centered is-multiline" id="inputShow">
-        <strong class="searchWord column is-half" id="lookupWithName"></strong>
-        <input class="input is-primary column is-half" type="text" placeholder="Enter a Word" id="enteredWord">
-        <button class="button">Search</button>
-      </form>
-
-
-      <div class="dropdown is-hoverable">
-
-        <div class="dropdown-trigger" id="dropDown">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span>what you need</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-
-        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-          <div class="dropdown-content">
-            <a href="#" class="dropdown-item" data-selection="definition">
-              definition
-            </a>
-            <a href="#" class="dropdown-item" data-selection="synonyms">
-              synonyms
-            </a>
-            <a href="#" class="dropdown-item" data-selection="antonyms">
-              antonyms
-            </a>
+       
+        <form class="Input columns is-centered" id="inputShow">
+          <div>
+            <p class="searchWord column is-full" id="lookupWithName"></p>
+            <input class="input is-primary" type="text" placeholder="Enter a Word" id="enteredWord">
+            <button class="button1 is-centered">Search</button>
           </div>
-        </div>
-      </div>
-    </div>
-  <div>
-    <div class="content-boxed">
-      <!-- GIPHY.API destination -->
-      <div id="GIF">
-
-        <img id="imgDest">
-
-      </div>
-
-
-      <!-- WORD.API destination -->
+        </form>
+   
+      <div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
       
-      <div class="box definitionBox" id="BoxContent">
+      <div class="content-boxed">
+        <!-- GIPHY.API destination -->
+            <div id="GIF">
 
-        <h5 id="definitionContent"></h5>
+              <img id="imgDest">
+
+            </div>
+
+        <!-- WORD.API destination -->
+        
+        <div class="box definitionBox" id="BoxContent">
+
+          <h5 id="definitionContent"></h5>
+
+        </div>
 
       </div>
-
     </div>
-  </div>
   
+<br>
 
-
-  <div id="resetName">
-    <button class="button1">Reset Name</button>
+  <div id="resetName" class="columns is-centered">
+    <button class="button2">Reset Name</button>
   </div>
 </div>
+
+<br>
+<br>
+
   <!-- FOOTER -->
 
   <footer class="footer">

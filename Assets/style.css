@@ -83,16 +83,16 @@ header {
 }
 
 .button1{
-    margin-left: 235px; 
+    margin-left: 215px; 
     background-color: #2A3B4D;
     color: #77A8D9;
     border: 4px solid #547799;
 }
 
 .button2{
-    background-color: #4c2a4d;
-    color: #000000;
-    border: 4px solid #997954;
+    background-color: #2A3B4D;
+    color: #77A8D9;
+    border: 4px solid #547799;
 }
 
 button:hover{
